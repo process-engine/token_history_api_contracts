@@ -10,9 +10,10 @@ export interface ITokenHistoryService {
   /**
    * Returns a list of all process tokens that have been recorded for a specific flow node instance.
    *
+   * @async
    * @param identity           The identity of the requesting user.
    * @param flowNodeInstanceId The id of the flow node instance for which to retrieve the process tokens.
    * @returns                  A list of process tokens for the given flow node instance.
    */
-  getTokensForFlowNodeInstance(identity: IIdentity, flowNodeInstanceId: string): Array<TokenHistoryEntry>;
+  getTokensForFlowNodeInstance(identity: IIdentity, flowNodeInstanceId: string): Promise<Array<TokenHistoryEntry>>;
 }
