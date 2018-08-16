@@ -12,8 +12,13 @@ export interface ITokenHistoryService {
    *
    * @async
    * @param identity           The identity of the requesting user.
+   * @param correlationId      The id of the correlation that contains the process model to which the flow node instance belongs.
+   * @param processModelId     The id of the process model that contains the flow node instance.
    * @param flowNodeInstanceId The id of the flow node instance for which to retrieve the process tokens.
    * @returns                  A list of process tokens for the given flow node instance.
    */
-  getTokensForFlowNodeInstance(identity: IIdentity, flowNodeInstanceId: string): Promise<Array<TokenHistoryEntry>>;
+  getTokensForFlowNodeInstance(identity: IIdentity,
+                               correlationId: string,
+                               processModelId: string,
+                               flowNodeInstanceId: string): Promise<Array<TokenHistoryEntry>>;
 }

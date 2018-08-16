@@ -1,10 +1,13 @@
 // tslint:disable:typedef
 const params = {
+  processModelId: ':process_model_id',
+  correlationId: ':correlation_id',
   flowNodeInstanceId: ':flow_node_instance_id',
 };
 
 const paths = {
-  getTokensForFlowNodeInstance: `/flow_node_instance/${params.flowNodeInstanceId}`,
+  getTokensForFlowNodeInstance:
+    `/correlation/${params.correlationId}/process_model/${params.processModelId}/flow_node_instance/${params.flowNodeInstanceId}`,
 };
 
 /**
