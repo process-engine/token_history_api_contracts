@@ -1,13 +1,19 @@
 import {IIdentity} from '@essential-projects/iam_contracts';
 
+import {TokenType} from './token_type';
+
+/**
+ * Describes a Process Token of a specific Flow Node Instance.
+ */
 export class TokenHistoryEntry {
-  // header
+  public flowNodeId: string;
+  public flowNodeInstanceId: string;
   public processInstanceId: string;
   public processModelId: string;
   public correlationId: string;
+  public tokenType: TokenType;
   public identity: IIdentity;
   public createdAt: Date;
-  public caller: string; // empty if this started the correlation
-  // payload
+  public caller: string; // Only set, if the token belongs to the FNI of a subprocess.
   public payload: any;
 }
