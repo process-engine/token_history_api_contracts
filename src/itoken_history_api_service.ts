@@ -5,7 +5,7 @@ import {IIdentity} from '@essential-projects/iam_contracts';
 /**
  * Contains functions for reading Process Tokens.
  */
-export interface ITokenHistoryService {
+export interface ITokenHistoryApiService {
 
   /**
    * Returns a list of all Process Tokens that have been recorded for a specific Flow Node.
