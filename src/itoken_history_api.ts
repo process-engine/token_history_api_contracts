@@ -33,5 +33,5 @@ export interface ITokenHistoryApi {
    */
   getTokensForCorrelationAndProcessModel(identity: IIdentity,
                                          correlationId: string,
-                                         processModelId: string): Promise<Array<TokenHistoryEntry>>;
+                                         processModelId: string): Promise<Array<Array<TokenHistoryEntry>>>;
 }
