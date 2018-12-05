@@ -7,6 +7,7 @@ const params = {
 
 const paths = {
   getTokensForFlowNode: `/correlation/${params.correlationId}/process_model/${params.processModelId}/flow_node/${params.flowNodeId}`,
+  getTokensForCorrelationAndProcessModel: `/correlation/${params.correlationId}/process_model/${params.processModelId}`,
 };
 
 /**
