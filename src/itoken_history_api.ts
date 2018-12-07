@@ -1,4 +1,5 @@
 import {TokenHistoryEntry} from './token_history_entry';
+import {TokenHistoryGroup} from './token_history_group';
 
 import {IIdentity} from '@essential-projects/iam_contracts';
 
@@ -33,5 +34,5 @@ export interface ITokenHistoryApi {
    */
   getTokensForCorrelationAndProcessModel(identity: IIdentity,
                                          correlationId: string,
-                                         processModelId: string): Promise<Array<Array<TokenHistoryEntry>>>;
+                                         processModelId: string): Promise<TokenHistoryGroup>;
 }
