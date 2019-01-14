@@ -35,4 +35,15 @@ export interface ITokenHistoryApi {
   getTokensForCorrelationAndProcessModel(identity: IIdentity,
                                          correlationId: string,
                                          processModelId: string): Promise<TokenHistoryGroup>;
+
+  /**
+   * Returns a list of all Process Tokens that have been recorded for a specific ProcessInstance.
+   *
+   * @async
+   * @param identity          The identity of the requesting user.
+   * @param processInstanceId The ID of the Process instance that contains the Flow Nodes.
+   * @returns                 A list of Process Tokens for the Flow Nodes of a given ProcessInstance.
+   */
+  getTokensForProcessInstance(identity: IIdentity,
+                              processInstanceId: string): Promise<TokenHistoryGroup>;
 }
