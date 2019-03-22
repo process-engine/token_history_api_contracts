@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/process-engine/token_history_api_contracts#readme",
   "dependencies": {
-    "@essential-projects/iam_contracts": "^3.4.0",
-    "@types/express": "^4.16.0",
+    "@essential-projects/iam_contracts": "^3.4.2",
+    "@types/express": "^4.16.1",
     "@types/node": "^10.12.2"
   },
   "devDependencies": {
@@ -30,7 +30,7 @@
     "gulptraum-typescript": "^3.0.0",
     "tsconfig": "^7.0.0",
     "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.3.4000"
   },
   "scripts": {
     "build": "gulp build",
