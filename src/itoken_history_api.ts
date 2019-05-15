@@ -34,7 +34,7 @@ export interface ITokenHistoryApi {
    */
   getTokensForFlowNodeByProcessInstanceId(identity: IIdentity,
                                           processInstanceId: string,
-                                          flowNodeId: string): Promise<Array<TokenHistoryEntry>>;
+                                          flowNodeId: string): Promise<TokenHistoryGroup>;
   /**
    * Returns a list of all Process Tokens that have been recorded for a specific Correlation and ProcessModel.
    *
