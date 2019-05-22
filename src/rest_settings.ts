@@ -1,4 +1,3 @@
-// tslint:disable:typedef
 const params = {
   processModelId: ':process_model_id',
   processInstanceId: ':process_instance_id',
@@ -13,16 +12,7 @@ const paths = {
   getTokensForProcessInstance: `/process_instance/${params.processInstanceId}/`,
 };
 
-/**
- * Contains the endpoints and various rest parameters used by the Token History API.
- */
 export const restSettings = {
-  /**
-   * A collection of all url parameters employed by the Token History API.
-   */
   params: params,
-  /**
-   * A collection of all urls employed by the Token History API.
-   */
   paths: paths,
 };
